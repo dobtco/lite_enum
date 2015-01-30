@@ -30,3 +30,6 @@ foo = Foo.new(size: Foo.sizes[:small])
 foo.size # => 1
 foo.size == Foo.sizes[:small] # => true
 ```
+
+[version]: https://img.shields.io/gem/v/lite_enum.svg
+[build]: http://img.shields.io/travis/dobtco/lite_enum.svg
