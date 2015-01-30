@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name = 'lite_enum'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.required_ruby_version = Gem::Requirement.new('>= 2.0.0')
   s.authors = ['Adam Becker']
   s.summary = 'Lightweight Enum class'
