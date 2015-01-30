@@ -36,12 +36,26 @@ describe LiteEnum do
     end
   end
 
-  describe "start" do
-    let(:zero_enum) { LiteEnum.new(:foo, :bar, start: 0) }
+  describe "options" do
+    describe "start" do
+      let(:zero_enum) { LiteEnum.new(:foo, :bar, start: 0) }
 
-    it "optionally takes a start option" do
-      expect(zero_enum[:foo]).to eq(0)
-      expect(zero_enum[:bar]).to eq(1)
+      it "optionally takes a start option" do
+        expect(zero_enum[:foo]).to eq(0)
+        expect(zero_enum[:bar]).to eq(1)
+      end
+    end
+
+    describe "explicit values" do
+      let(:explicit_enum) do
+        LiteEnum.new(foo: 1, bar: 2, fizz: 4)
+      end
+
+      it "sets values explicitly" do
+        expect(explicit_enum[:foo]).to eq(1)
+        expect(explicit_enum[:bar]).to eq(2)
+        expect(explicit_enum[:fizz]).to eq(4)
+      end
     end
   end
 end

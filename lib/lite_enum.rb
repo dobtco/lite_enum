@@ -12,6 +12,11 @@ class LiteEnum < SimpleDelegator
   def initialize(*members)
     super({})
 
+    # Support for explicit values
+    if members.length == 1 && members[0].is_a?(Hash)
+      return update members[0]
+    end
+
     options = members.extract_options!
     start = options.fetch(:start) { 1 }
 
