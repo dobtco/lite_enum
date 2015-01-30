@@ -14,7 +14,5 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/dobtco/lite_enum'
 
   s.add_dependency 'activesupport'
-
   s.add_development_dependency 'rspec-rails', '3.1.0'
-  s.add_development_dependency 'simple_form', '3.1.0'
 end
