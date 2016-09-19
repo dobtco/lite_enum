@@ -52,12 +52,3 @@ class LiteEnum < SimpleDelegator
   end
 end
 
-begin
-  require 'simple_form'
-  require 'simple_form/version'
-rescue LoadError
-end
-
-if defined?(SimpleForm) && Gem::Version.new(SimpleForm::VERSION) >= Gem::Version.new('3.1.0')
-  require 'simple_form_monkeypatch'
-end
